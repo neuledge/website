@@ -1,0 +1,531 @@
+/* general */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: #1a0d22;
+}
+
+header,
+section {
+    font-size: 122%;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+a {
+    color: #89279a;
+}
+
+a:hover,
+a:focus {
+    color: #1a0d22;
+}
+
+.container {
+    margin: 0 1.5em;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        width: 950px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1100px;
+    }
+}
+
+
+/* sections */
+
+section {
+    padding: 4em 0;
+    text-align: center;
+}
+
+section.light {
+    background: #f9f9f9;
+}
+
+section.dark {
+    background: #28193a;
+}
+
+section p {
+    max-width: 650px;
+    margin: 1em auto;
+}
+
+.dark {
+    color: #fff;
+}
+
+.dark a {
+    color: #fff;
+    transition: color 1s linear;
+}
+
+.dark a:hover,
+.dark a:focus {
+    transition: color 200ms ease-out;
+}
+
+.dark a:hover,
+.dark a:focus,
+.dark h1 {
+    color: #f9c60b;
+}
+
+.illustration {
+    max-width: 400px;
+    margin: 4em auto;
+}
+
+.illustration.large {
+    max-width: 600px;
+}
+
+.illustration img {
+    max-width: 300px;
+}
+
+/*.illustrated-content .illustration img {*/
+    /*!*display: block;*!*/
+    /*!*width: 100%;*!*/
+    /*!*max-width: 300px;*!*/
+    /*!*margin: 0 auto;*!*/
+/*}*/
+
+@media (min-width: 768px) {
+    .illustration img {
+        max-width: 100%;
+    }
+
+    .illustration-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .illustration-container .illustration {
+        width: 45%;
+        text-align: center;
+    }
+
+    .illustration-container .content {
+        width: 45%;
+        text-align: left;
+    }
+}
+
+
+/* hero */
+
+.hero {
+    background: #1c0c29 url("../images/hero-nightsky.jpg") bottom no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero > .canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-content {
+    padding-top: 2em;
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    display: inline-block;
+    font-family: 'Gilda Display', serif;
+    font-size: 360%;
+    color: #fff !important;
+    text-decoration: none;
+    margin: 0 auto 0.1em;
+}
+
+.hero nav {
+    margin: 3em 0 1em;
+    font-size: 70%;
+}
+
+.hero nav > * {
+    display: inline-block;
+    margin: 0 0.8em;
+    text-decoration: none;
+}
+
+.hero nav > *:first-child {
+    margin-left: 0;
+}
+
+.hero nav > *:last-child {
+    margin-right: 0;
+}
+
+.hero nav > * > span {
+    padding-right: 2px;
+}
+
+@media (min-width: 500px) {
+    .hero nav {
+        font-size: 85%;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-content {
+        padding-top: 18%;
+    }
+
+    .hero nav {
+        font-size: 100%;
+        margin-top: 32%;
+    }
+
+    .hero nav > * {
+        margin: 0 2em;
+    }
+
+    .hero nav > * > span {
+        padding-right: 4px;
+    }
+}
+
+/* intro */
+
+#intro {
+    background: url("../images/intro-background.png") bottom left no-repeat;
+    background-size: auto 300px;
+    padding-bottom: 300px;
+}
+
+@media (min-width: 500px) {
+    #intro {
+        background-position: bottom right;
+    }
+}
+
+
+@media (min-width: 768px) {
+    #intro {
+        background-size: auto 450px;
+        padding-bottom: 400px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    #intro {
+        background-size: auto 600px;
+        padding-bottom: 550px;
+    }
+}
+
+
+
+/* features */
+
+section.features {
+    padding: 3em 0;
+    font-size: 120%;
+}
+
+.feature {
+    text-align: center;
+    padding: 1em 0;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.features.shine .feature {
+    animation: featureShine 700ms ease;
+}
+
+.features.shine .feature:nth-child(2) {
+    animation-delay: 100ms;
+}
+
+.features.shine .feature:nth-child(3) {
+    animation-delay: 200ms;
+}
+
+@keyframes featureShine {
+    0% {color: #fff}
+    50% {color: #f9c60b}
+    100% {color: #fff}
+}
+
+.feature > span {
+    font-size: 350%;
+    margin: 0.4em 0;
+}
+
+.feature h3 {
+    font-size: 140%;
+}
+
+.feature p {
+    margin-top: 0;
+}
+
+.feature + .feature {
+    margin-top: 2em;
+}
+
+@media (min-width: 768px) {
+    .features > .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .feature {
+        width: 30%;
+        margin: 0;
+        font-size: 80%;
+    }
+
+    .feature + .feature {
+        margin-top: 0;
+    }
+}
+
+/* asset */
+
+#assets {
+    background: #28193a url("../images/asset-background.jpg") no-repeat center bottom;
+    background-size: auto 150px;
+    padding-bottom: 200px;
+}
+
+@media (min-width: 500px) {
+    #assets {
+        background-size: contain;
+        padding-bottom: 30%;
+    }
+}
+
+/* roadmap */
+
+.roadmap-container {
+    overflow: auto;
+}
+
+.roadmap {
+    min-width: 800px;
+    display: table;
+    list-style: none;
+    font-size: 80%;
+    margin: 8em 0 2em;
+    padding: 0 1em;
+}
+
+.roadmap .milestone {
+    position: relative;
+    border-top: 5px solid #bbb;
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 2em;
+}
+
+.roadmap .milestone:nth-child(even) {
+    padding-top: 5em;
+}
+
+.roadmap .milestone.done {
+    border-top-color: #89279a;
+}
+
+.roadmap .milestone.active::before {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background: #89279a;
+    background: linear-gradient(to right, #89279a 25%, #bbbbbb 100%);
+    animation: milestoneLineActive 2s ease infinite;
+}
+
+@keyframes milestoneLineActive {
+    0% {left: 0}
+    90% {left: -50%}
+    100% {left: 0}
+}
+
+.roadmap .milestone::after {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    background: #fff;
+    top: -6px;
+    left: 50%;
+    margin-top: -0.6em;
+    margin-left: -0.6em;
+    content: "";
+    border: 5px solid #bbb;
+    outline: 2px solid #fff;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+}
+
+.roadmap .milestone.done::after {
+    border-color: #89279a;
+}
+
+.roadmap .milestone.active::after {
+    animation: milestonePosActive 2s ease infinite;
+}
+
+@keyframes milestonePosActive {
+    0% {border-color: #89279a}
+    90% {border-color: #bbb}
+    100% {border-color: #89279a}
+}
+
+.roadmap .milestone-date {
+    display: block;
+    position: absolute;
+    top: -3em;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 0.5em;
+}
+
+.roadmap .milestone-targets {
+    padding: 2em 1em 0;
+    font-size: 80%;
+    text-align: center;
+    list-style: none;
+}
+
+.roadmap .milestone-targets > li::before {
+    content: "- ";
+}
+
+.roadmap .milestone-targets::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    margin-left: 2px;
+    border-left: 2px dashed #bbb;
+    width: 0;
+    height: 4em;
+}
+
+.roadmap .milestone:nth-child(even) .milestone-targets::before {
+    height: 8em;
+}
+
+.roadmap .milestone.done .milestone-targets::before {
+    margin-left: 0;
+    border-left: 5px solid #bbb;
+}
+
+@media (max-width: 768px) {
+    .roadmap-container {
+        margin: 0 -1.5em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .roadmap {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* join us */
+
+.social-icons {
+    font-size: 200%;
+}
+
+.social-icons > a {
+    display: inline-block;
+}
+
+.social-icons > a + a {
+    margin-left: 0.4em;
+}
+
+/* footer */
+
+footer {
+    padding: 5em 1em 2em;
+    text-align: center;
+    font-size: 80%;
+}
+
+footer.dark {
+    background: #1c0f29;
+    color: #7e5d8c;
+}
+
+footer.dark a {
+    color: #7e5d8c;
+}
+
+/*footer.dark a:hover,*/
+/*footer.dark a:focus {*/
+    /*color: #fff;*/
+/*}*/
+
+footer .logo {
+    display: inline-block;
+    width: 1em;
+}
+
+footer .logo img {
+    display: block;
+    width: 100%;
+}
+
+footer nav {
+    max-width: 24em;
+    margin: 3em auto 0;
+}
+
+footer nav > * {
+    display: inline-block;
+    margin: 0.5em 1em;
+    text-decoration: none;
+}
