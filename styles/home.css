@@ -158,7 +158,7 @@ section p {
 /* hero */
 
 .hero {
-    background: #1c0c29 url("../images/hero-nightsky.jpg") bottom no-repeat;
+    background: #1c0c29 url("../images/hero-nightsky-768px.jpg") bottom no-repeat;
     background-size: cover;
     color: #fff;
     position: relative;
@@ -219,6 +219,10 @@ section p {
 }
 
 @media (min-width: 768px) {
+    .hero {
+        background-image: url("../images/hero-nightsky.jpg");
+    }
+
     .hero-content {
         padding-top: 18%;
     }
