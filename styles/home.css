@@ -355,6 +355,143 @@ section.features {
     }
 }
 
+/* roadmap */
+
+.roadmap-container {
+    overflow: auto;
+}
+
+.roadmap {
+    min-width: 800px;
+    display: table;
+    list-style: none;
+    font-size: 80%;
+    margin: 8em 0 2em;
+    padding: 0 1em;
+}
+
+.roadmap .milestone {
+    position: relative;
+    border-top: 5px solid #bbb;
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 2em;
+}
+
+.roadmap .milestone:nth-child(even) {
+    padding-top: 5em;
+}
+
+.roadmap .milestone.done {
+    border-top-color: #89279a;
+}
+
+.roadmap .milestone.active::before {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background: #89279a;
+    background: linear-gradient(to right, #89279a 25%, #bbbbbb 100%);
+    animation: milestoneLineActive 2s ease infinite;
+}
+
+@keyframes milestoneLineActive {
+    0% {left: 0}
+    90% {left: -50%}
+    100% {left: 0}
+}
+
+.roadmap .milestone::after {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    background: #fff;
+    top: -6px;
+    left: 50%;
+    margin-top: -0.6em;
+    margin-left: -0.6em;
+    content: "";
+    border: 5px solid #bbb;
+    outline: 2px solid #fff;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+}
+
+.roadmap .milestone.done::after {
+    border-color: #89279a;
+}
+
+.roadmap .milestone.active::after {
+    animation: milestonePosActive 2s ease infinite;
+}
+
+@keyframes milestonePosActive {
+    0% {border-color: #89279a}
+    90% {border-color: #bbb}
+    100% {border-color: #89279a}
+}
+
+.roadmap .milestone-date {
+    display: block;
+    position: absolute;
+    top: -3em;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 0.5em;
+}
+
+.roadmap .milestone-targets {
+    padding: 2em 1em 0;
+    font-size: 80%;
+    text-align: center;
+    list-style: none;
+}
+
+.roadmap .milestone-targets > li::before {
+    content: "- ";
+}
+
+.roadmap .milestone-targets::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    margin-left: 2px;
+    border-left: 2px dashed #bbb;
+    width: 0;
+    height: 4em;
+}
+
+.roadmap .milestone:nth-child(even) .milestone-targets::before {
+    height: 8em;
+}
+
+.roadmap .milestone.done .milestone-targets::before {
+    margin-left: 0;
+    border-left: 5px solid #bbb;
+}
+
+@media (max-width: 768px) {
+    .roadmap-container {
+        margin: 0 -1.5em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .roadmap {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
 /* join us */
 
 .social-icons {
