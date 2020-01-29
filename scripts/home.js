@@ -48,10 +48,11 @@ particlesJS('particles-js', {
 
 (function tracking() {
   function track() {
-    var event =
-      this.getAttribute('data-action')
-      || this.getAttribute('title')
-      || this.innerText;
+    var event = String(
+      this.getAttribute('data-action') ||
+      this.getAttribute('title') ||
+      this.innerText
+    ).trim();
 
     analytics.track(event, {
       event: event,
