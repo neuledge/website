@@ -204,7 +204,8 @@ section.text > .container {
 
 .hero nav {
     margin: 20% 0 1em;
-    font-size: 70%;
+    font-size: 50%;
+    font-weight: 500;
 }
 
 .hero nav > * {
@@ -223,6 +224,12 @@ section.text > .container {
 
 .hero nav > * > span {
     padding-right: 2px;
+}
+
+@media (min-width: 350px) {
+    .hero nav {
+        font-size: 60%;
+    }
 }
 
 @media (min-width: 500px) {
@@ -536,7 +543,8 @@ form label + .input {
 }
 
 form .input:focus {
-    border: 1px solid #1c0f29;
+    border: 1px solid #89279a;
+    color: #89279a;
     outline: none;
 }
 
@@ -565,6 +573,12 @@ form button {
     width: 100%;
     min-width: 120px;
     margin: 0;
+}
+
+form button:focus,
+form button:hover {
+    background: #89279a;
+    outline: none;
 }
 
 @media (min-width: 768px) {
