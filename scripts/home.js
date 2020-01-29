@@ -45,3 +45,36 @@ particlesJS('particles-js', {
   },
   retina_detect: true
 });
+
+(function tracking() {
+  function track() {
+    var event =
+      this.getAttribute('data-action')
+      || this.getAttribute('title')
+      || this.innerText;
+
+    analytics.track(event, {
+      event: event,
+      content: this.innerText,
+      location: this.href || this.action
+    });
+  }
+
+  var i;
+
+  var links = document.getElementsByTagName('A');
+  for (i = 0; i < links.length; i += 1) {
+    links[i].addEventListener('click', track);
+    links[i].addEventListener('contextmenu', track);
+  }
+
+  var buttons = document.getElementsByTagName('BUTTON');
+  for (i = 0; i < buttons.length; i += 1) {
+    buttons[i].addEventListener('click', track);
+  }
+
+  var forms = document.getElementsByTagName('FORM');
+  for (i = 0; i < forms.length; i += 1) {
+    forms[i].addEventListener('submit', track);
+  }
+})();

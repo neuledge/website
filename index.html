@@ -33,6 +33,13 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         rel="stylesheet">
   <link href="styles/home.css?v=7" rel="stylesheet">
+
+  <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+      analytics.load("QojEDoX9vJMHyuHf4JoW3s07skT1XbTE");
+      analytics.page();
+    }}();
+  </script>
 </head>
 <body>
 <header class="hero dark">
@@ -159,7 +166,8 @@
       <p>Neuledge is currently in closed beta.<br />
         Leave your details below to request an invitation.</p>
 
-        <form action="https://neuledge.us4.list-manage.com/subscribe/post?u=3686e0974d1fb43e2605586a5&amp;id=c013ff479d" method="post" target="_blank">
+        <form
+          action="https://neuledge.us4.list-manage.com/subscribe/post?u=3686e0974d1fb43e2605586a5&amp;id=c013ff479d" method="post" target="_blank" data-action="Request Early Access">
 
           <label for="form-email">
             Email Address
@@ -217,6 +225,6 @@
   </nav>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="scripts/home.js?v=4"></script>
+<script src="scripts/home.js?v=5"></script>
 </body>
 </html>
