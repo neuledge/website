@@ -1,66 +1,47 @@
 particlesJS('particles-js', {
   particles: {
-    number: {
-      value: 150,
-      // density: {
-      //   enable: true,
-      //   value_area: 800
-      // }
-    },
-    // color: {
-    //   value: '#999',
-    // },
-    line_linked: {
-      distance: 150,
-      // color: '#999',
-      opacity: 0.3,
-      // width: 2,
+    number: { value: 100 },
+    color: { value: '#fff' },
+    shape: {
+      type: 'circle',
+      stroke: { width: 0, color: '#000' },
     },
     opacity: {
-      // value: 0.7,
-      // random: true,
+      value: 1,
+      random: true,
+      anim: { enable: true, speed: 14, opacity_min: 0.8, sync: false }
     },
     size: {
-      value: 2,
+      value: 1.3,
       random: true,
+      anim: { enable: true, speed: 0.1, size_min: 0.8, sync: false }
     },
+    line_linked: { enable: false },
     move: {
-      speed: 3,
-      // out_mode: 'bounce',
+      enable: true,
+      speed: 0.5,
+      direction: 'none',
+      random: true,
+      straight: false,
+      out_mode: 'out',
+      bounce: false,
+      attract: { enable: false }
     }
-  }
+  },
+  interactivity: {
+    detect_on: 'canvas',
+    events: {
+      onhover: { enable: false },
+      onclick: { enable: false },
+      resize: true
+    }
+    // modes: {
+    //   "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
+    //   "bubble": { "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3 },
+    //   "repulse": { "distance": 400, "duration": 0.4 },
+    //   "push": { "particles_nb": 4 },
+    //   "remove": { "particles_nb": 2 }
+    // }
+  },
+  retina_detect: true
 });
-
-var shineTimer = null;
-function featuresShine() {
-  var features = document.getElementById('features');
-  if (!features || !features.className) return;
-
-  var className = ' shine';
-  var hasShine = features.className.indexOf(className) !== -1;
-
-  var relativeOffsetTop = features.offsetTop - window.pageYOffset;
-  var relativeOffsetBottom = relativeOffsetTop + features.offsetHeight;
-  var isVisible = relativeOffsetTop > -features.offsetHeight && relativeOffsetTop < features.offsetHeight;
-  var shouldShine = relativeOffsetBottom < window.innerHeight && relativeOffsetTop > 0;
-
-  if (hasShine === shouldShine || isVisible === hasShine) {
-    return;
-  }
-
-  if (shineTimer) {
-    clearTimeout(shineTimer);
-    shineTimer = null;
-  }
-
-  if (shouldShine) {
-    shineTimer = setTimeout(function() {
-      shineTimer = null;
-      features.className += className;
-    }, 400);
-  } else {
-    features.className = features.className.replace(className, '');
-  }
-}
-
-document.addEventListener('scroll', featuresShine);
