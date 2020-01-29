@@ -612,13 +612,12 @@ footer .logo img {
 }
 
 footer nav {
-    max-width: 24em;
     margin: 3em auto 0;
 }
 
 footer nav > * {
     display: inline-block;
-    margin: 0.5em 1em;
+    margin: 0.5em;
     text-decoration: none;
 }
 
@@ -629,5 +628,9 @@ footer nav > * {
 
     footer nav {
         margin-top: 6em;
+    }
+
+    footer nav > * {
+        margin: 0.5em 1em;
     }
 }
