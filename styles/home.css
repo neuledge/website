@@ -79,9 +79,17 @@ section.dark {
     background: #28193a;
 }
 
+section.text {
+    text-align: left;
+}
+
 section p {
     max-width: 650px;
     margin: 1em auto;
+}
+
+section.text > .container {
+    max-width: 650px;
 }
 
 .dark {
