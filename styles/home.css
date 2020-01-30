@@ -316,7 +316,7 @@ section.features {
 
 .feature > span {
     display: block;
-    color: #28193a;
+    color: #613988;
     font-size: 350%;
     margin: 0.5em 0;
     text-align: center;
@@ -337,7 +337,7 @@ section.features {
     font-size: 50%;
     display: block;
     opacity: 0.5;
-    color: #613988;
+    color: #1a0d22;
 }
 
 .feature p {
