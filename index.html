@@ -28,16 +28,16 @@
   <meta content="favicon/browserconfig.xml?v=2" name="msapplication-config">
   <meta content="#ffffff" name="theme-color">
 
-  <link href="https://fonts.googleapis.com/css?family=Gilda+Display|Open+Sans:300,400"
+  <link href="https://fonts.googleapis.com/css?family=Gilda+Display|Open+Sans:300,400|Courgette"
         rel="stylesheet">
   <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         rel="stylesheet">
-  <link href="styles/home.css?v=7" rel="stylesheet">
+  <link href="styles/home.css?v=8" rel="stylesheet">
 
   <script>
     !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-      analytics.load("QojEDoX9vJMHyuHf4JoW3s07skT1XbTE");
+      location.hostname !== 'localhost' && analytics.load("QojEDoX9vJMHyuHf4JoW3s07skT1XbTE");
       analytics.page();
     }}();
   </script>
@@ -51,13 +51,13 @@
       share it easily with any type of user. &nbsp;
       <a href="#intro">Learn more &raquo;</a></p>
     <nav>
-      <a href="#business-owners">
+      <a href="#features">
         <span class="fas fa-magic"></span>
         Main Features
       </a>
       <a href="#assets">
         <span class="fas fa-filter"></span>
-        No-Code Support
+        Integrations
       </a>
       <a href="#join-us">
         <span class="fas fa-sign-in-alt"></span>
@@ -69,37 +69,63 @@
 <section id="intro">
   <div class="container">
     <h1>Built for Content Creators</h1>
-    <p>Wherever your data come from spreadsheets, API
-      endpoints or manually crafted. Neuledge gives you the power to structure the data in any way
+    <p>Wherever your data comes from spreadsheets, API
+      endpoints or manually crafted, Neuledge gives you the power to structure your data in any way
       you want it.</p>
     <p>Manipulate the data using no-code tools and export it through multiple ways,
       from raw spreadsheets to programmable APIs.</p>
   </div>
 </section>
-<section class="features dark" id="features">
+<section class="dark" id="features">
   <div class="container">
-    <div id="business-owners" class="feature">
-      <span class="fas fa-chart-line"></span>
-      <div class="feature-content">
-        <h3><span>Best for</span> Business Owners</h3>
-        <p>Convert the data you need from the data you own using hundreds of templates,
-          integrations and data-flows.</p>
-      </div>
-    </div>
-    <div id="project-managers" class="feature">
-      <span class="fas fa-table"></span>
-      <div class="feature-content">
-        <h3><span>Best for</span> Project Managers</h3>
-        <p>Create a one place content-base for your team and let them use it in any way they want,
-          while keeping all your data in sync.</p>
-      </div>
-    </div>
-    <div id="developers" class="feature">
-      <span class="fas fa-code"></span>
-      <div class="feature-content">
-        <h3><span>Best for</span> Developers</h3>
-        <p>Define strict data structures, manipulate it with ready-to-use functions, and use live
-          editors with a click of a button.</p>
+    <h1>Predictable Data-Structures</h1>
+    <p>Neuledge makes sure you will get the data in the exact format you need it. Build a schema
+      using hundreds of ready-to-use functions and transform it without writing code.</p>
+
+    <div class="entity-editor">
+      <div class="scrollbar">
+        <div class="line">
+          <span class="field-label"><span class="field">id</span>:</span>
+          <span class="function">HexCode <span class="cert"></span> (</span>
+          <span class="argument">SKU</span>
+          <span class="function">)</span>
+        </div>
+        <div class="line">
+          <span class="field-label"><span class="field">name</span>:</span>
+          <span class="function">String <span class="cert"></span> (</span>
+          <span class="argument">Name</span> <span class="function">,</span>
+          <span class="field-name">format:</span> <span class="field">Camel Case
+          <span class="cert"></span></span>
+          <span class="function">)</span>
+        </div>
+        <div class="line">
+          <span class="field-label"><span class="field">modelName</span>:</span>
+          <span class="function">String <span class="cert"></span> (</span>
+          <span class="argument">Model</span>
+          <span class="function">)</span>
+        </div>
+        <div class="line">
+          <span class="field-label"><span class="field">picture</span>:</span>
+          <span class="function">Image <span class="cert"></span> (</span>
+          <span class="argument">Photo</span> <span class="function">,</span>
+          <span class="field-name">max-width:</span> <span class="field">300px</span> <span
+          class="function">,</span>
+          <span class="field-name">max-height:</span> <span class="field">150px</span>
+          <span class="function">)</span>
+        </div>
+        <div class="line">
+          <span class="field-label"><span class="field">price</span>:</span>
+          <span class="function">CurrencyAmount <span class="cert"></span> (</span>
+          <span class="argument">Total Price</span> <span class="function">,</span>
+          <span class="field-name">type:</span> <span class="field">USD <span class="cert"></span></span>
+          <span class="function">)</span>
+        </div>
+        <div class="line">
+          <span class="field-label"><span class="field">amount</span>:</span>
+          <span class="function">Integer <span class="cert"></span> (</span>
+          <span class="argument">Stock Amount</span>
+          <span class="function">)</span>
+        </div>
       </div>
     </div>
   </div>
@@ -109,7 +135,7 @@
     <div class="illustration medium">
       <img alt="Universal Database" src="images/database.svg" />
     </div>
-    <h1>Universal Database</h1>
+    <h1>Collaborative Database</h1>
     <p>Share public datasets for others to use, or harness the community and manufacture
       new datasets for your need.</p>
 
@@ -119,10 +145,25 @@
 </section>
 <section class="dark" id="assets">
   <div class="container">
-    <h1>Code-Free Transformations</h1>
-    <p>Neuledge makes sure you will get the data in the exact format you need it. Build a flow
-      using one of our hundreds of ready-to-use functions and transform the data without writing a
-      single line of code.</p>
+    <h1>Accessible Integrations</h1>
+    <p>Collect your knowledge from multiple sources and store it easily as structured entities.
+      Build programmable endpoints for your team, or export it in any way you need it.</p>
+
+    <div class="cards">
+      <ul style="width:48.2em">
+        <li><span class="fas fa-pencil-alt"></span> Manual</li>
+        <li><span class="fas fa-file-excel"></span> Excel File</li>
+        <li><span class="fab fa-google-drive"></span> Google Sheets</li>
+        <li><span class="fas fa-cube"></span> AirTable</li>
+        <li><span class="fas fa-file-csv"></span> CSV File</li>
+        <li><span class="fas fa-file-code"></span> JSON File</li>
+        <li><span class="fas fa-file-code"></span> XML File</li>
+        <li><span class="fas fa-laptop-code"></span> API Endpoint</li>
+        <li><span class="fas fa-globe"></span> Webhook</li>
+        <li><span class="fas fa-database"></span> SQL</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 <section id="roadmap">
@@ -194,9 +235,9 @@
             <option value="Other">Other</option>
           </select>
 
-          <label for="form-notes">For what would you use this platform?</label>
+          <label for="form-notes">What you will use Neuledge for?</label>
           <textarea id="form-notes" class="input" name="NOTES" rows="4"
-                    placeholder="Please tell us the REAL NEED you have for this system so we can prioritize you over other users."></textarea>
+                    placeholder="Please describe, in general terms, for what you will use Neuledge so we can prioritize you over other users."></textarea>
 
           <div class="actions">
             <label>
@@ -214,7 +255,7 @@
   <a class="logo" href="/">
     <img alt="Neuledge logo" src="images/icon.svg" />
   </a>
-  <p>&copy; 2020 Neuledge.</p>
+  <p>&copy; 2020 Neuledge</p>
   <nav>
     <a href="https://twitter.com/neuledge" target="_blank">Twitter</a>
     <a href="https://www.facebook.com/neuledge/" target="_blank">Facebook</a>
