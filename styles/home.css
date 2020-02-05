@@ -313,7 +313,7 @@ section.text > .container {
     text-align: left;
     padding: 1em;
     font-family: dm, Menlo, Monaco, "Courier New", monospace;
-    font-size: 80%;
+    font-size: 50%;
     background: #212121;
     border: 3px solid #fff;
     border-radius: 4px;
@@ -325,12 +325,12 @@ section.text > .container {
 }
 
 .entity-editor .scrollbar {
-    width: 42em;
+    width: 44em;
 }
 
 .entity-editor .field-label {
     display: inline-block;
-    min-width: 6em;
+    min-width: 7em;
     vertical-align: middle;
 }
 
@@ -375,6 +375,12 @@ section.text > .container {
     border-radius: 4px;
 }
 
+@media (min-width: 768px) {
+    .entity-editor {
+        font-size: 80%;
+    }
+}
+
 /* asset */
 
 #assets {
@@ -388,6 +394,7 @@ section.text > .container {
     color: #fff;
     padding: 2em 0;
     margin: 2em 0;
+    font-size: 80%;
 }
 
 .cards > ul {
@@ -412,6 +419,10 @@ section.text > .container {
 }
 
 @media (min-width: 500px) {
+    .cards {
+        font-size: 100%;
+    }
+
     #assets {
         background-size: contain;
         padding-bottom: 23%;
@@ -624,7 +635,7 @@ form button {
     padding: 0.5em;
     width: 100%;
     min-width: 120px;
-    margin: 0;
+    margin: 1em 0 0;
 }
 
 form button:focus,
@@ -637,6 +648,7 @@ form button:hover {
     form button {
         min-width: 160px;
         width: auto;
+        margin: 0;
     }
 
     form .actions {
