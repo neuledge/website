@@ -305,19 +305,22 @@ section.text > .container {
     text-align: left;
     padding: 1em;
     font-family: dm, Menlo, Monaco, "Courier New", monospace;
-    font-size: 50%;
+    font-size: 70%;
     background: #fff;
     border-radius: 4px;
     line-height: 2.5em;
-    max-width: 800px;   
+    width: 100%;
     margin: 0 auto;
     overflow: auto;
     color: #666;
     box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.3);
 }
 
-.entity-editor .scrollbar {
-    width: 600px;
+.entity-editor .line {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 2.5em;
 }
 
 .entity-editor .cert {
@@ -331,9 +334,7 @@ section.text > .container {
 }
 
 .entity-editor .field-label {
-    display: inline-block;
     min-width: 7em;
-    vertical-align: middle;
 }
 
 .entity-editor .field {
@@ -373,11 +374,8 @@ section.text > .container {
 
 @media (min-width: 768px) {
     .entity-editor {
+        max-width: 800px;
         font-size: 80%;
-    }
-
-    .entity-editor .scrollbar {
-        width: 750px;
     }
 }
 
