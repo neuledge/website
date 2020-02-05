@@ -325,7 +325,7 @@ section.text > .container {
 }
 
 .entity-editor .scrollbar {
-    width: 50em;
+    width: 500px;
 }
 
 .entity-editor .field-label {
