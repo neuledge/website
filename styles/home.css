@@ -372,10 +372,59 @@ section.text > .container {
     border-radius: 4px;
 }
 
+.entity-editor .tooltip {
+    display: inline-block;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    color: #91b9b9;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.5rem;
+}
+
+.entity-editor .tooltip > .tooltip-content {
+    left: 0;
+    display: block;
+    position: absolute;
+    width: 15em;
+    margin-left: -7em;
+    text-align: center;
+    line-height: 1.6em;
+    height: 2.5em;
+    opacity: 0;
+    transition: opacity ease-in-out 1s 1s;
+}
+
+.visible .entity-editor .tooltip > .tooltip-content {
+    opacity: 1;
+}
+
+.entity-editor .tooltip.upper > .tooltip-content {
+    bottom: 2.2em;
+    background: url("../images/upper-brackets.svg") no-repeat center bottom;
+    background-size: contain;
+    padding-bottom: 0.9em;
+}
+
+.entity-editor .tooltip.downer > .tooltip-content {
+    top: 2.2em;
+    background: url("../images/downer-brackets.svg") no-repeat center top;
+    background-size: contain;
+    padding-top: 0.9em;
+}
+
 @media (min-width: 768px) {
     .entity-editor {
         max-width: 800px;
         font-size: 80%;
+    }
+
+    .entity-editor .tooltip {
+        font-size: 0.7rem;
     }
 }
 

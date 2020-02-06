@@ -46,6 +46,37 @@ particlesJS('particles-js', {
   retina_detect: true
 });
 
+(function featuresVisible() {
+  var timer = null;
+
+  document.addEventListener('scroll', function() {
+    var features = document.getElementById('features');
+    if (!features || !features.className) return;
+
+    var className = ' visible';
+    var hasClass = features.className.indexOf(className) !== -1;
+
+    var relativeOffsetTop = features.offsetTop - window.pageYOffset;
+    var isVisible = relativeOffsetTop > -features.offsetHeight && relativeOffsetTop < features.offsetHeight;
+
+    if (isVisible === hasClass) {
+      return;
+    }
+
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+
+    if (isVisible) {
+      features.className += className;
+    } else {
+      features.className = features.className.replace(className, '');
+    }
+  });
+})();
+
+
 (function tracking() {
   function track() {
     var event = String(
