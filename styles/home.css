@@ -340,7 +340,7 @@ section.text > .container {
 .entity-editor .field {
     background: #3c3e4c;
     color: #fff;
-    padding: 2px;
+    padding: 2px 4px;
     border-radius: 4px;
 }
 
