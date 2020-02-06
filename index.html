@@ -33,7 +33,7 @@
   <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         rel="stylesheet">
-  <link href="styles/home.css?v=14" rel="stylesheet">
+  <link href="styles/home.css?v=15" rel="stylesheet">
 
   <script>
     !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
@@ -80,57 +80,41 @@
   <div class="container">
     <h1>Predictable Data-Structures</h1>
     <p>Neuledge makes sure you will get the data in the exact format you need it. Build a schema
-      using hundreds of ready-to-use functions and transform it without writing code.</p>
+      using hundreds of ready-to-use functions and transform it using a simple interface.</p>
 
     <div class="entity-editor">
       <div class="line"></div>
       <div class="line">
         <span class="field-label">
-          <span class="field">name</span>:
+          <span class="field">email</span>:
         </span>
         <span class="field-value">
-          <span class="function">Te<span class="tooltip upper">
+          <span class="function">Em<span class="tooltip upper">
               <span class="tooltip-content">
-                converts input to plain text
+                validates the input type
               </span>
-            </span>xt <span class="cert"></span> (</span>
-          <span class="argument">Name</span> <span class="function">,</span>
-          <span class="field-name">format:</span>
-          <span class="field">Camel<span class="tooltip upper">
-              <span class="tooltip-content">
-                formats "apple" as "Apple"
-              </span>
-            </span> Case <span class="cert"></span></span>
+            </span>ail <span class="cert"></span> (</span>
+          <span class="argument">Order Name <span class="cert"></span></span>
           <span class="function">)</span>
         </span>
       </div>
       <div class="line">
         <span class="field-label">
-          <span class="field">picture</span>:
-        </span>
-        <span class="field-value">
-          <span class="function">Image <span class="cert"></span> (</span>
-          <span class="argument">Photo</span> <span class="function">,</span>
-          <span class="field-name">max-width:</span>
-          <span class="field">300px</span> <span class="function">,</span>
-          <span class="field-name">max-height:</span>
-          <span class="field">150px</span>
-          <span class="function">)</span>
-        </span>
-      </div>
-      <div class="line">
-        <span class="field-label">
-          <span class="field">price</span>:
+          <span class="field">invoicePrice</span>:
         </span>
         <span class="field-value">
           <span class="function">Currency <span class="cert"></span> (</span>
           <span class="argument">Total<span class="tooltip downer">
               <span class="tooltip-content">
-                the source name to use
+                choose the imported values
               </span>
-            </span> Price</span> <span class="function">,</span>
+            </span> Price <span class="cert"></span></span> <span class="function">,</span>
           <span class="field-name">type:</span>
-          <span class="field">USD <span class="cert"></span></span>
+          <span class="field">US <span class="tooltip upper">
+              <span class="tooltip-content">
+                treats input's amount as cents
+              </span>
+            </span>Cent <span class="cert"></span></span>
           <span class="function">)</span>
         </span>
       </div>

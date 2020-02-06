@@ -303,7 +303,7 @@ section.text > .container {
 
 .entity-editor {
     text-align: left;
-    padding: 1em;
+    padding: 1em 2em;
     font-family: dm, Menlo, Monaco, "Courier New", monospace;
     font-size: 70%;
     background: #fff;
@@ -334,7 +334,7 @@ section.text > .container {
 }
 
 .entity-editor .field-label {
-    min-width: 7em;
+    min-width: 9.5em;
 }
 
 .entity-editor .field {
@@ -372,6 +372,10 @@ section.text > .container {
     border-radius: 4px;
 }
 
+.entity-editor .argument > .cert {
+    border-top-color: #fff;
+}
+
 .entity-editor .tooltip {
     display: inline-block;
     width: 0;
@@ -379,7 +383,7 @@ section.text > .container {
     padding: 0;
     position: relative;
     vertical-align: middle;
-    color: #74a7a7;
+    color: #588b8b;
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
@@ -419,7 +423,7 @@ section.text > .container {
 
 @media (min-width: 768px) {
     .entity-editor {
-        max-width: 800px;
+        max-width: 750px;
         font-size: 80%;
     }
 
