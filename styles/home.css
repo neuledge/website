@@ -303,7 +303,7 @@ section.text > .container {
 
 .entity-editor {
     text-align: left;
-    padding: 1em 2em;
+    padding: 3.5em 2.5em 2.5em;
     font-family: dm, Menlo, Monaco, "Courier New", monospace;
     font-size: 70%;
     background: #fff;
