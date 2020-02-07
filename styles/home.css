@@ -334,7 +334,13 @@ section.text > .container {
 }
 
 .entity-editor .field-label {
-    min-width: 10em;
+    min-width: 5em;
+}
+
+.entity-editor .field-value:before {
+    content: "← ";
+    font-size: 130%;
+    color: #0d0714;
 }
 
 .entity-editor .field {
