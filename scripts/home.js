@@ -76,6 +76,12 @@ particlesJS('particles-js', {
   });
 })();
 
+(function roadmapScroll() {
+  var div = document.getElementsByClassName('roadmap-container')[0];
+  if (!div) return;
+
+  div.scrollLeft = div.scrollWidth;
+})();
 
 (function tracking() {
   function track() {
