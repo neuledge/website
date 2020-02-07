@@ -334,7 +334,7 @@ section.text > .container {
 }
 
 .entity-editor .field-label {
-    min-width: 5em;
+    min-width: 6em;
 }
 
 .entity-editor .field-value:before {
@@ -407,6 +407,13 @@ section.text > .container {
     height: 2.5em;
     opacity: 0;
     transition: opacity ease-in-out 1s 2s;
+}
+
+.editor-caption {
+    margin-top: 0.5em;
+    font-size: 50%;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 .visible .entity-editor .tooltip > .tooltip-content {
