@@ -406,7 +406,7 @@ section.text > .container {
     line-height: 1.6em;
     height: 2.5em;
     opacity: 0;
-    transition: opacity ease-in-out 1s 2s;
+    transition: opacity ease-in-out 1s 1s;
 }
 
 .editor-caption {
