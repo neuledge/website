@@ -46,32 +46,29 @@ particlesJS('particles-js', {
   retina_detect: true
 });
 
+function isVisible(elm) {
+  var relativeOffsetTop = elm.offsetTop - window.pageYOffset;
+  return relativeOffsetTop > -elm.offsetHeight && relativeOffsetTop < elm.offsetHeight;
+}
+
 (function featuresVisible() {
-  var timer = null;
+  var className = ' visible';
+
+  var elm = document.getElementById('features');
+  if (!elm) return;
 
   document.addEventListener('scroll', function() {
-    var features = document.getElementById('features');
-    if (!features || !features.className) return;
+    var hasClass = elm.className.indexOf(className) !== -1;
+    var elmVisible = isVisible(elm);
 
-    var className = ' visible';
-    var hasClass = features.className.indexOf(className) !== -1;
-
-    var relativeOffsetTop = features.offsetTop - window.pageYOffset;
-    var isVisible = relativeOffsetTop > -features.offsetHeight && relativeOffsetTop < features.offsetHeight;
-
-    if (isVisible === hasClass) {
+    if (elmVisible === hasClass) {
       return;
     }
 
-    if (timer) {
-      clearTimeout(timer);
-      timer = null;
-    }
-
-    if (isVisible) {
-      features.className += className;
+    if (elmVisible) {
+      elm.className += className;
     } else {
-      features.className = features.className.replace(className, '');
+      elm.className = elm.className.replace(className, '');
     }
   });
 })();
@@ -81,6 +78,24 @@ particlesJS('particles-js', {
   if (!div) return;
 
   div.scrollLeft = div.scrollWidth;
+})();
+
+(function joinUsVisible() {
+  var elm = document.getElementById('join-us');
+  if (!elm) return;
+
+  function whenVisible() {
+    if (!isVisible(elm)) return;
+
+    console.log('dd');
+    analytics.track('Join Us Viewed', {
+      id: 'join-us',
+    });
+
+    document.removeEventListener('scroll', whenVisible);
+  }
+
+  document.addEventListener('scroll', whenVisible);
 })();
 
 (function tracking() {
