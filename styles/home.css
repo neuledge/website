@@ -303,7 +303,7 @@ section.text > .container {
 
 .entity-editor {
     text-align: left;
-    padding: 3.5em 2.5em 2.5em;
+    padding: 3.5em 2.5em;
     font-family: dm, Menlo, Monaco, "Courier New", monospace;
     font-size: 70%;
     background: #fff;
@@ -343,21 +343,15 @@ section.text > .container {
     color: #0d0714;
 }
 
-.entity-editor .field {
-    background: #3c3e4c;
-    color: #fff;
-    padding: 2px 4px;
+.entity-editor .field,
+.entity-editor .argument {
+    padding: 0.3em;
     border-radius: 4px;
 }
 
-.entity-editor .field-name {
-    color: #99986c;
-    font-size: 80%;
-}
-
-.entity-editor .field > .cert {
-    margin: 0 2px 0 -4px;
-    border-top-color: #fff;
+.entity-editor .field {
+    background: #ebf2f2;
+    color: #497474;
 }
 
 .entity-editor .function {
@@ -371,15 +365,18 @@ section.text > .container {
 }
 
 .entity-editor .argument {
-    color: #fff;
-    background: #88007a;
-    font-style: italic;
-    padding: 2px 4px;
-    border-radius: 4px;
+    color: #8b5d32;
+    background: #f9f5d7;
 }
 
 .entity-editor .argument > .cert {
-    border-top-color: #fff;
+    border-top-color: #8b5d32;
+}
+
+.entity-editor .argument-name {
+    color: #99986c;
+    font-style: italic;
+    font-size: 80%;
 }
 
 .entity-editor .tooltip {
@@ -389,7 +386,7 @@ section.text > .container {
     padding: 0;
     position: relative;
     vertical-align: middle;
-    color: #588b8b;
+    color: #888;
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
