@@ -115,18 +115,18 @@ function isVisible(elm) {
 
   var i;
 
-  var links = document.getElementsByTagName('A');
+  var links = document.getElementsByTagName('a');
   for (i = 0; i < links.length; i += 1) {
     links[i].addEventListener('click', track);
     links[i].addEventListener('contextmenu', track);
   }
 
-  var buttons = document.getElementsByTagName('BUTTON');
+  var buttons = document.getElementsByTagName('button');
   for (i = 0; i < buttons.length; i += 1) {
     buttons[i].addEventListener('click', track);
   }
 
-  var forms = document.getElementsByTagName('FORM');
+  var forms = document.getElementsByTagName('form');
   for (i = 0; i < forms.length; i += 1) {
     forms[i].addEventListener('submit', track);
   }
