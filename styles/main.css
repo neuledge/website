@@ -1,0 +1,281 @@
+/* general */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    color: #311140;
+    background: #fdfaff url("../images/bg-top.svg") no-repeat top center;
+    background-size: contain;
+    padding: 15% 0 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+a {
+    color: #7400aa;
+}
+
+a:hover,
+a:focus {
+    color: #311140;
+}
+
+.container {
+    margin: 0 1.5em;
+}
+
+@media (min-width: 370px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 500px) {
+    body {
+        background-image: url("../images/bg-right.svg");
+        background-position: 125% 100%;
+        background-attachment: fixed;
+        background-size: 18em auto;
+        padding: 0 25% 0 0;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 500px;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        font-size: 22px;
+        background-position: 115% 100%;
+    }
+
+    .container {
+        width: 650px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container.large {
+        width: 850px;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-position: right bottom;
+        background-size: contain;
+    }
+
+    .container {
+        width: 850px;
+        margin-right: 10%;
+    }
+
+    .container.large {
+        width: 75%;
+        margin-right: 0;
+    }
+}
+
+
+/* header */
+
+header {
+    margin: 4em 0;
+}
+
+header > .container {
+    padding-left: 4em;
+    background: url("../images/icon.svg") no-repeat top left;
+    background-size: contain;
+}
+
+#logo {
+    display: inline-block;
+    font-family: 'Junge', serif;
+    text-decoration: none;
+    color: inherit;
+    font-size: 250%;
+    line-height: 1em;
+    margin: 0 0 0.2em;
+}
+
+header p {
+    margin: 0;
+}
+
+/* main */
+
+main {
+    margin: 8em 0;
+    font-style: italic;
+    font-weight: normal;
+}
+
+main h1 {
+    font-size: 200%;
+    margin: 0 0 2em 2em;
+}
+
+main h1 > span {
+    position: relative;
+    display: table;
+    background: #7400aa;
+    color: #fdfaff;
+    padding: 0 0.4em;
+}
+
+main h1 > span + span {
+    margin: 0.2em 0 0 0.7em;
+}
+
+main h1 > span:before,
+main h1 > span:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: #fdfaff;
+    width: 0.4em;
+    height: 100%;
+    transform: skewX(-10deg);
+}
+
+main h1 > span::before {
+    left: -0.2em;
+}
+
+main h1 > span::after {
+    right: -0.2em;
+}
+
+main p {
+    margin: 2em 0 0;
+    color: #5e2877;
+    font-size: 120%;
+}
+
+@media (min-width: 400px) {
+    main h1 {
+        margin-left: 30%;
+    }
+}
+
+@media (min-width: 1440px) {
+    main h1 {
+        font-size: 250%;
+    }
+}
+
+/* integrations */
+
+#integrations {
+    margin: 5em 0;
+    text-align: center;
+}
+
+#integrations > .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#integrations img {
+    max-width: 88px;
+    max-height: 25px;
+    margin: 1em 0.5em;
+}
+
+@media (min-width: 768px) {
+    #integrations img {
+        max-width: 175px;
+        max-height: 50px;
+        margin: 1em;
+    }
+}
+
+/* form */
+
+#form {
+    margin: 4em 0;
+    text-align: center;
+}
+
+/* footer */
+
+footer {
+    margin: 2em 0 1em;
+}
+
+footer > .container {
+    border-top: 1px solid #ebe4ee;
+    padding: 1em 0.5em;
+}
+
+footer a {
+    color: #1a0d22;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #7400aa;
+}
+
+footer .links {
+    text-align: center;
+}
+
+footer .links a + a::before {
+    content: "• ";
+    color: #1a0d22 !important;
+    white-space: pre;
+    display: inline-block;
+    padding: 0 0.5em;
+}
+
+footer .social {
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+footer .social > a {
+    margin-left: 0.8em;
+}
+
+@media (min-width: 1000px) {
+    footer > .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .links {
+        text-align: left;
+    }
+
+    footer .social {
+        flex-direction: row-reverse;
+        margin-top: 0;
+    }
+}

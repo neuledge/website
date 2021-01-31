@@ -1,14 +1,14 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Neuledge",
+    "short_name": "Neuledge",
     "icons": [
         {
-            "src": "/favicon/android-chrome-192x192.png?v=3",
+            "src": "/favicon/android-chrome-192x192.png?v=4",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/favicon/android-chrome-512x512.png?v=3",
+            "src": "/favicon/android-chrome-512x512.png?v=4",
             "sizes": "512x512",
             "type": "image/png"
         }
